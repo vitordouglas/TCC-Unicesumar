@@ -16,17 +16,17 @@ function validateDate(string $date, $format = 'Y-m-d'): bool
 if ($name && $email && $birthdate && $password) {
     if (!validateDate($birthdate, 'Y-m-d')) {
         $_SESSION['flash'] = 'Data de nascimento inválida.';
-        exit(header("Location: " . $base . "/signup.php"));
+        exit(header("Location: ".$base."/signup.php"));
     }
 
     $auth = new Auth($pdo, $base);
     if ($auth->emailExists($email)) {
         $_SESSION['flash'] = 'E-mail já cadastrado.';
-        exit(header("Location: " . $base . "/signup.php"));
+        exit(header("Location: ".$base."/signup.php"));
     }
 
     $auth->registerUser($name, $email, $birthdate, $password);
-    exit(header("Location: " . $base));
+    exit(header("Location: ".$base));
 }
 $_SESSION['flash'] = 'Campos não enviados.';
-exit(header("Location: " . $base . "/signup.php"));
+exit(header("Location: ".$base."/signup.php"));

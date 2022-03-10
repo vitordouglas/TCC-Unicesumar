@@ -2,4 +2,4 @@
 require_once './config.php';
 
 $_SESSION['token'] = '';
-exit(header("Location: " . $base));
+exit(header("Location: ".$base));

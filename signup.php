@@ -26,7 +26,6 @@ require_once './config.php';
             <input required placeholder="Digite seu Nome Completo" class="input" type="text" name="name" />
             <input required placeholder="Digite seu E-mail" class="input" type="email" name="email" />
             <input required placeholder="Digite sua Data de Nascimento" class="input" type="date" name="birthdate" />
-
             <input required placeholder="Digite sua Senha" class="input" type="password" name="password" />
 
             <input class="button" type="submit" value="Fazer Cadastro" />

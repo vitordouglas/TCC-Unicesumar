@@ -24,13 +24,13 @@ class Auth
                 return $user;
             }
         }
-        exit(header("Location: " . $this->base . "/login.php"));
+        exit(header("Location: ".$this->base."/login.php"));
     }
 
 
     private static function tokenGenerator(): string
     {
-        return md5(time() . rand(0, 9999)) . time();
+        return md5(time().rand(0, 9999)).time();
     }
 
     public function validateLogin(string $email, string $password): bool

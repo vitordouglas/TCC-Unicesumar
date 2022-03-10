@@ -8,8 +8,8 @@ $password = filter_input(INPUT_POST, 'password');
 if ($email && $password) {
     $auth = new Auth($pdo, $base);
     if ($auth->validateLogin($email, $password)) {
-        exit(header("Location: " . $base));
+        exit(header("Location: ".$base));
     }
 }
 $_SESSION['flash'] = 'E-mail e/ou senha errados.';
-exit(header("Location: " . $base . "/login.php"));
+exit(header("Location: ".$base."/login.php"));
